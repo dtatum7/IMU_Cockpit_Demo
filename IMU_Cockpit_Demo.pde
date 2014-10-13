@@ -55,6 +55,7 @@ void serialEvent(Serial port) {
   pitchScaled = (int)( ( (float)pitch )/255*height*4 ); // Scale pitch data w.r.t. image size
   yawScaled = (int)( ( (float)yaw )/255*width ); // Scale yaw data w.r.t. image size
   // For debugging
-  //println( "Raw Input: " + roll + " " + pitch + " " +yaw); // Uncomment for debugging
-  //println( "Rotation Degrees: " + rollDegrees + " " + pitchScaled + " " +yawScaled); // Uncomment for debugging
+  println(Serial.list());
+  println( "Raw Input: " + roll + " " + pitch + " " +yaw); // Uncomment for debugging
+  println( "Rotation Degrees: " + rollDegrees + " " + pitchScaled + " " +yawScaled); // Uncomment for debugging
 }
