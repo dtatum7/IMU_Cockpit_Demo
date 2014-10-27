@@ -77,7 +77,7 @@ void serialEvent(Serial port) {
     pitch = serialBuffer[1]; // Raw pitch data from serial port
     yaw = serialBuffer[2]; // Raw yaw data from serial port
   }
-  rollDegrees = (int)( ( (float)roll )/255*360 ); // Scale roll data in degrees
+  rollDegrees = -(int)( ( (float)roll )/255*360 ); // Scale roll data in degrees
   pitchScaled = -(int)( ( (float)pitch )/255*height*4 ); // Scale pitch data w.r.t. image size
   yawScaled = (int)( ( (float)yaw )/255*width ); // Scale yaw data w.r.t. image size
   yawDegrees = (int)( ( (float)yaw )/255*360 ); // Scale yaw data in degrees
